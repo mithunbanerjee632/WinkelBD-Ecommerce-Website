@@ -7,6 +7,8 @@ import {register} from "./serviceWorkerRegistration";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/assets/css/fontawesome.css';
 import '../src/assets/css/style.css';
+import '../src/assets/css/animate.min.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
