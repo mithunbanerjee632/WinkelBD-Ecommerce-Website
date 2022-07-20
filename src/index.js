@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import {register} from "./serviceWorkerRegistration";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/assets/css/fontawesome.css';
+import '../src/assets/css/style.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
