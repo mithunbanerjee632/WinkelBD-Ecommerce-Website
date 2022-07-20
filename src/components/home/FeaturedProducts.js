@@ -13,8 +13,8 @@ class FeaturedProducts extends Component {
                            <Card className="image-box h-100 w-100 card">
                                <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/a/m/amazfit-gts-4-mini-smart-watch-17-07-2022.jpg"/>
                                <Card.Body>
-                                   <p className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</p>
-                                   <p className="product-name-on-card">Price:7,999 Tk</p>
+                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
+                                   <p className="product-price-on-card">Price:7,999 Tk</p>
                                </Card.Body>
                            </Card>
                         </Col>
@@ -23,8 +23,8 @@ class FeaturedProducts extends Component {
                             <Card className="image-box h-100 w-100 card">
                                 <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/a/m/amazfit-gts-4-mini-smart-watch-17-07-2022.jpg"/>
                                 <Card.Body>
-                                    <p className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</p>
-                                    <p className="product-name-on-card">Price:7,999 Tk</p>
+                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
+                                    <p className="product-price-on-card">Price:7,999 Tk</p>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -33,8 +33,8 @@ class FeaturedProducts extends Component {
                             <Card className="image-box h-100 w-100 card">
                                 <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/a/m/amazfit-gts-4-mini-smart-watch-17-07-2022.jpg"/>
                                 <Card.Body>
-                                    <p className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</p>
-                                    <p className="product-name-on-card">Price:7,999 Tk</p>
+                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
+                                    <p className="product-price-on-card">Price:7,999 Tk</p>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -43,8 +43,8 @@ class FeaturedProducts extends Component {
                             <Card className="image-box h-100 w-100 card">
                                 <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/a/m/amazfit-gts-4-mini-smart-watch-17-07-2022.jpg"/>
                                 <Card.Body>
-                                    <p className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</p>
-                                    <p className="product-name-on-card">Price:7,999 Tk</p>
+                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
+                                    <p className="product-price-on-card">Price:7,999 Tk</p>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -53,8 +53,8 @@ class FeaturedProducts extends Component {
                             <Card className="image-box h-100 w-100 card">
                                 <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/a/m/amazfit-gts-4-mini-smart-watch-17-07-2022.jpg"/>
                                 <Card.Body>
-                                    <p className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</p>
-                                    <p className="product-name-on-card">Price:7,999 Tk</p>
+                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
+                                    <p className="product-price-on-card">Price:7,999 Tk</p>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -63,8 +63,8 @@ class FeaturedProducts extends Component {
                             <Card className="image-box h-100 w-100 card">
                                 <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/a/m/amazfit-gts-4-mini-smart-watch-17-07-2022.jpg"/>
                                 <Card.Body>
-                                    <p className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</p>
-                                    <p className="product-name-on-card">Price:7,999 Tk</p>
+                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
+                                    <p className="product-price-on-card">Price:7,999 Tk</p>
                                 </Card.Body>
                             </Card>
                         </Col>
