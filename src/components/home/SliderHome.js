@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 
-class Slider extends Component {
+class SliderHome extends Component {
     render() {
         return (
             <Fragment>
@@ -10,4 +10,4 @@ class Slider extends Component {
     }
 }
 
-export default Slider;
+export default SliderHome;
