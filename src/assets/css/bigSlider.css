@@ -1,10 +1,13 @@
 .slick-dots{
-    top: 80% ;
+    top: 85% ;
 }
 .slider-img{
     width: 100% !important;
-    height: auto;
-    margin:80px 20px 80px 20px ;
+    height: 400px !important;
+    /*height: auto;*/
+
+
+    /*margin:80px 20px 80px 20px ;*/
 }
 .slick-slide{
     height:auto !important;

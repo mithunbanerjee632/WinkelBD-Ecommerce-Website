@@ -14,6 +14,7 @@ class HomeSlider extends Component {
 
         return (
             <div className="container-fluid m-0 p-0 overflow-hidden w-100 ">
+                <div  className="m-0 p-0">
                    <div className="row card-body">
                        <Slider {...settings}>
                            <div className="col-md-6 animated slideInDown text-center">
@@ -34,7 +35,7 @@ class HomeSlider extends Component {
                        </Slider>
                    </div>
 
-
+                 </div>
             </div>
         );
     }
