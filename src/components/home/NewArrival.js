@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {Card, Container} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 class NewArrival extends Component {
 
@@ -84,24 +85,29 @@ class NewArrival extends Component {
                             </Card>
                         </div>
                         <div>
-                            <Card className="card h-100  text-center w-100  image-box">
-                                <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/y/1/y15s-13-07-2022.jpg"/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                    <p className="product-price-on-card">Price:7,999 Tk</p>
-                                </Card.Body>
-                            </Card>
+                            <Link to="/productDetails">
+                                <Card className="card h-100  text-center w-100  image-box">
+                                    <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/y/1/y15s-13-07-2022.jpg"/>
+                                    <Card.Body>
+                                        <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
+                                        <p className="product-price-on-card">Price:7,999 Tk</p>
+                                    </Card.Body>
+                                </Card>
+                            </Link>
                         </div>
                         <div>
-                            <Card className="card h-100  text-center w-100  image-box">
-                                <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/m/s/msa18crnebu-20-07-2022.jpg"/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                    <p className="product-price-on-card">Price:7,999 Tk</p>
-                                </Card.Body>
-                            </Card>
+                            <Link to="/productDetails">
+                                <Card className="card h-100  text-center w-100  image-box">
+                                    <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/m/s/msa18crnebu-20-07-2022.jpg"/>
+                                    <Card.Body>
+                                        <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
+                                        <p className="product-price-on-card">Price:7,999 Tk</p>
+                                    </Card.Body>
+                                </Card>
+                            </Link>
                         </div>
                         <div>
+
                             <Card className="card h-100  text-center w-100  image-box">
                                 <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/j/b/jbl-flip-5-wireless-portable-speaker-16-7-22.jpg"/>
                                 <Card.Body>
