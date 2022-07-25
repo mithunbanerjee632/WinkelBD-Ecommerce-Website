@@ -1,6 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Container, Navbar, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import notification from "../../assets/images/notification.svg"
+import love from "../../assets/images/love.svg"
+import user from "../../assets/images/user.svg"
 import logo from "../../assets/images/logo.png";
 
 class NavMenuDesktop extends Component {
@@ -22,7 +25,7 @@ class NavMenuDesktop extends Component {
                                 </div>
                             </Col>
                             <Col className="p-1" lg={2} md={2} sm={12} xs={12}>
-                                <Link to="/notification" className="btn mx-1 nav-round-btn"><img src="" alt="notification"/></Link>
+                                <Link to="/notification" className="btn mx-1 nav-round-btn"><img src={notification} alt="notification"/> 5</Link>
                                 <Link to="/onboard" className=" btn-light btn">LOGIN</Link>
                             </Col>
                         </Row>

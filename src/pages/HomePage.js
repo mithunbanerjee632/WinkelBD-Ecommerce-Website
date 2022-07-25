@@ -7,8 +7,15 @@ import HomeTop from "../components/home/HomeTop";
 import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
 import HomeTopMobile from "../components/home/HomeTopMobile";
+import FooterDesktop from "../components/common/FooterDesktop";
+import FooterMobile from "../components/common/FooterMobile";
+import HomeTopBanner from "../components/home/HomeTopBanner";
+import HomeTopBannerMobile from "../components/home/HomeTopBannerMobile";
 
 class HomePage extends Component {
+    componentDidMount() {
+        window.scroll(0,0);
+    }
     render() {
         return (
             <Fragment>
@@ -23,11 +30,32 @@ class HomePage extends Component {
                     <HomeTopMobile/>
                 </div>
 
+                <HomeTopBanner/>
+
+                {/*<div className="Desktop">*/}
+                {/*    <HomeTopBanner/>*/}
+
+                {/*</div>*/}
+
+                {/*<div className="Mobile">*/}
+                {/*    <HomeTopBannerMobile/>*/}
+
+                {/*</div>*/}
+
 
                  <NewArrival/>
                  <FeaturedProducts/>
                  <Collection/>
                  <Categories/>
+
+                <div className="Desktop">
+                    <FooterDesktop/>
+
+                </div>
+                <div className="Mobile">
+                    <FooterMobile/>
+
+                </div>
 
             </Fragment>
         );
