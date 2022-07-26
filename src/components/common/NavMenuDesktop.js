@@ -7,6 +7,7 @@ import user from "../../assets/images/user.svg"
 import logo from "../../assets/images/logo.png";
 
 class NavMenuDesktop extends Component {
+
     render() {
         return (
             <Fragment>
@@ -26,7 +27,8 @@ class NavMenuDesktop extends Component {
                             </Col>
                             <Col className="p-1" lg={2} md={2} sm={12} xs={12}>
                                 <Link to="/notification" className="btn mx-1 nav-round-btn"><img src={notification} alt="notification"/> 5</Link>
-                                <Link to="/onboard" className=" btn-light btn">LOGIN</Link>
+                                <Link to="/notification" className="btn mx-1 nav-round-btn"><img src={love} alt="wishlist"/> 5</Link>
+                                <Link to="/onboard" className=" btn-light btn"><img src={user} alt="user"/>LOGIN</Link>
                             </Col>
                         </Row>
 
