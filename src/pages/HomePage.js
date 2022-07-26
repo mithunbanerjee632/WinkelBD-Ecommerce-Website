@@ -11,6 +11,9 @@ import FooterDesktop from "../components/common/FooterDesktop";
 import FooterMobile from "../components/common/FooterMobile";
 import HomeTopBanner from "../components/home/HomeTopBanner";
 import HomeTopBannerMobile from "../components/home/HomeTopBannerMobile";
+import FeaturedTopBanner from "../components/home/FeaturedTopBanner";
+import CollectionTopBanner from "../components/home/CollectionTopBanner";
+import CategoriesTopBanner from "../components/home/CategoriesTopBanner";
 
 class HomePage extends Component {
     componentDidMount() {
@@ -44,8 +47,11 @@ class HomePage extends Component {
 
 
                  <NewArrival/>
+                 <FeaturedTopBanner/>
                  <FeaturedProducts/>
+                 <CollectionTopBanner/>
                  <Collection/>
+                 <CategoriesTopBanner/>
                  <Categories/>
 
                 <div className="Desktop">
