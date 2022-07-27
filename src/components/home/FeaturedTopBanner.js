@@ -9,7 +9,7 @@ class FeaturedTopBanner extends Component {
                     <Row>
                         <Col xl={12} lg={12} md={12} sm={12} xs={12}>
                             <Card className="card h-100 w-100">
-                                <img src="images/Computer-ac-updated.jpg"/>
+                                <img src="images/mobile-ac-updated.jpg"/>
                             </Card>
                         </Col>
                     </Row>
