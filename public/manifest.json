@@ -1,7 +1,7 @@
 {
-  "name": "Shop Express",
-  "short_name": "Shop Express",
-  "description": "Shop Express Ecommerce System",
+  "name": "Winkelbd",
+  "short_name": "WinkelBD",
+  "description": "WinkelBD Ecommerce System",
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",

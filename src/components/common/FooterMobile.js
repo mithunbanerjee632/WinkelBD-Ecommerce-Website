@@ -29,7 +29,7 @@ class FooterMobile extends Component {
                         <Container className="">
                             <Row className="px-0 text-white">
                                 {/*<p>{ ReactHtmlParser(this.state.deliveryNotice) }</p>*/}
-                                <p className="text-center">Copyright &copy; 2022 deshibazar.com</p>
+                                <p className="text-center">Copyright &copy; 2022 winkelbd.com</p>
                             </Row>
                         </Container>
                     </Container>

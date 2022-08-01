@@ -62,7 +62,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -71,7 +71,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -92,7 +92,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -101,7 +101,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -110,7 +110,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -119,7 +119,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -128,7 +128,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -137,7 +137,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -146,7 +146,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -155,7 +155,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>
@@ -164,7 +164,7 @@ class MegaMenu extends Component {
                        </ul>
                    </div>
 
-                   <button className="accordion"><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
+                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
                    <div className="panel">
                        <ul>
                            <li><a href="#" className="accordionItem">Men's Shirt</a></li>

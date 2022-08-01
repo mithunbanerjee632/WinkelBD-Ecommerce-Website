@@ -49,7 +49,7 @@ class NavMenuMobile extends Component {
 
 
                             <Link to="/cart" className="cart-btn float-right"><i className="fa fa-shopping-cart"/> 4 items </Link>
-                            <Link to="/wishlist" className="btn mx-1 nav-round-btn"><i className="fa fa-search"/> </Link>
+                            <Link to="/" className="btn mx-1 nav-round-btn"><i className="fa fa-search"/> </Link>
                             <Link to="/wishlist" className="btn mx-1 nav-round-btn"><img src={love} alt="wishlist"/></Link>
                             <Link to="/notification" className="btn mx-1 nav-round-btn"><img src={notification} alt="notification"/></Link>
                             <Link to="/onboard" className=" btn-light btn"><img src={user} alt="user"/></Link>

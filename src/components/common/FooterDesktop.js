@@ -12,7 +12,7 @@ class FooterDesktop extends Component {
                         <Row className="px-0 my-5">
                             <Col xl={3} lg={3} md={3} sm={6} xs={12}>
                                 <h5 className="footer-menu-title">About</h5>
-                                <p>Deshi Bazar is New Ecommerce Company in Bangladesh.We want supply authentic product to our valuable custormers.</p>
+                                <p>WinkelBD is a New Ecommerce Company in Bangladesh.We want supply authentic product to our valuable custormers.</p>
                                  <h5 className="footer-menu-title">SOCIAL LINK</h5>
                                 <a target="_blank" href=""><i className="fab m-1 h4 fa-facebook"/></a>
                                 <a target="_blank" href=""><i className="fab m-1 h4 fa-instagram"/></a>
@@ -37,6 +37,8 @@ class FooterDesktop extends Component {
                                 <Link  to="/refund" className="footer-link">Refund Policy</Link><br/>
                             </Col>
 
+
+
                             <Col xl={3} lg={3} md={3} sm={6} xs={12}>
                                 <h5 className="footer-menu-title">DOWNLOAD APP</h5>
                                 <a target="_blank" href=""><img className="mt-2" src={android} alt="android logo"/></a>
@@ -50,7 +52,7 @@ class FooterDesktop extends Component {
                         <Container className="">
                             <Row className="px-0 text-white">
                                 {/*<p>{ ReactHtmlParser(this.state.deliveryNotice) }</p>*/}
-                                <p className="text-center">Copyright &copy; 2022 deshibazar.com</p>
+                                <p className="text-center">Copyright &copy; 2022 winkelbd.com</p>
                             </Row>
                         </Container>
                     </Container>

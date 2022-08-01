@@ -14,11 +14,28 @@ import HomeTopBannerMobile from "../components/home/HomeTopBannerMobile";
 import FeaturedTopBanner from "../components/home/FeaturedTopBanner";
 import CollectionTopBanner from "../components/home/CollectionTopBanner";
 import CategoriesTopBanner from "../components/home/CategoriesTopBanner";
+import Axios from "axios";
+import AppUrl from "../api/AppUrl";
 
 class HomePage extends Component {
+    constructor() {
+        super();
+
+    }
+
     componentDidMount() {
         window.scroll(0,0);
+        this.GetVisitorsDetails();
     }
+
+    //visitor Details
+
+    GetVisitorsDetails=()=>{
+        Axios.get(AppUrl.VisitorDetails).then().catch();
+    }
+
+
+
     render() {
         return (
             <Fragment>

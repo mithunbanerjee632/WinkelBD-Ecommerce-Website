@@ -3,18 +3,12 @@ import NavMenuDesktop from "../components/common/NavMenuDesktop";
 import NavMenuMobile from "../components/common/NavMenuMobile";
 import FooterDesktop from "../components/common/FooterDesktop";
 import FooterMobile from "../components/common/FooterMobile";
-import Contact from "../components/common/Contact";
-import Axios from "axios";
-import AppUrl from "../api/AppUrl";
+import Cart from "../components/cartlist/Cart";
 
-
-class ContactPage extends Component {
+class CartPage extends Component {
     componentDidMount() {
         window.scroll(0,0);
     }
-
-
-
     render() {
         return (
             <Fragment>
@@ -28,7 +22,7 @@ class ContactPage extends Component {
 
                 </div>
 
-                <Contact/>
+                <Cart/>
 
                 <div className="Desktop">
                     <FooterDesktop/>
@@ -43,4 +37,4 @@ class ContactPage extends Component {
     }
 }
 
-export default ContactPage;
+export default CartPage;
