@@ -4,6 +4,7 @@ import NavMenuMobile from "../components/common/NavMenuMobile";
 import FooterDesktop from "../components/common/FooterDesktop";
 import FooterMobile from "../components/common/FooterMobile";
 import About from "../components/others/About";
+import PageTop from "../components/common/PageTop";
 
 class AboutPage extends Component {
     componentDidMount() {
@@ -21,6 +22,7 @@ class AboutPage extends Component {
                     <NavMenuMobile/>
 
                 </div>
+                <PageTop pagetitle="ABOUT US" activepage="About Us"/>
 
                 <About/>
 

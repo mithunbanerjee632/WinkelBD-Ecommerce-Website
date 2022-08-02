@@ -7,6 +7,10 @@ import cogoToast from 'cogo-toast';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AppUrl from "../../api/AppUrl";
+import ClipLoader from "react-spinners/ClipLoader";
+import { useState, CSSProperties } from "react";
+import Spinner from 'react-bootstrap/Spinner';
+
 
 class Contact extends Component {
 
@@ -69,7 +73,7 @@ class Contact extends Component {
         }else if(message.length==0){
             toast.info('Please Write Your Message');
         }else{
-            sendButton.innerHTML="Sending";
+            sendButton.innerHTML="Sending...";
             let MyFormData = new FormData();
             MyFormData.append('name',name);
             MyFormData.append('email',email);
