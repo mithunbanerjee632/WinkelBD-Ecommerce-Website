@@ -5,6 +5,7 @@ import Contact from "../components/common/Contact";
 import FooterDesktop from "../components/common/FooterDesktop";
 import FooterMobile from "../components/common/FooterMobile";
 import Refund from "../components/others/Refund";
+import PageTop from "../components/common/PageTop";
 
 class RefundPage extends Component {
     componentDidMount() {
@@ -22,7 +23,7 @@ class RefundPage extends Component {
                     <NavMenuMobile/>
 
                 </div>
-
+                <PageTop pagetitle="REFUND POLICY" activepage="Refund Policy"/>
                 <Refund/>
 
                 <div className="Desktop">

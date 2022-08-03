@@ -5,6 +5,7 @@ import Contact from "../components/common/Contact";
 import FooterDesktop from "../components/common/FooterDesktop";
 import FooterMobile from "../components/common/FooterMobile";
 import Policy from "../components/others/Policy";
+import PageTop from "../components/common/PageTop";
 
 class PolicyPage extends Component {
     componentDidMount() {
@@ -22,7 +23,7 @@ class PolicyPage extends Component {
                     <NavMenuMobile/>
 
                 </div>
-
+                <PageTop pagetitle="PRIVACY POLICY" activepage="Privacy Policy"/>
                 <Policy/>
 
                 <div className="Desktop">

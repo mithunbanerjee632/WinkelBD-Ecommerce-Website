@@ -1,20 +1,18 @@
 import React, {Component, Fragment} from 'react';
-import {Breadcrumb, Card, Col, Container, Row} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import { Col, Container, Row} from "react-bootstrap";
+import Loading from "../loader/Loading";
+import WentWrong from "../wentwrong/WentWrong";
+import Axios from "axios";
+import AppUrl from "../../api/AppUrl";
+import ReactHtmlParser from "react-html-parser";
 
 class Refund extends Component {
     render() {
         return (
             <Fragment>
-                <Container className="TopSection">
-                    <Breadcrumb className="shadow-sm mt-2 bg-white">
-                        <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
-                        <Breadcrumb.Item><Link to="/refund">Refund</Link></Breadcrumb.Item>
-                    </Breadcrumb>
+                <Container className="TopSection bg-white">
                     <Row>
                         <Col className="mt-1" md={12} lg={12} sm={12} xs={12}>
-                            <Card>
-                                <Card.Body>
                                     <div className="">
                                         <div className="animated zoomIn">
                                             <p>Deshi Bazar is New Ecommerce Company in Bangladesh.We want supply authentic product to our valuable custormers.</p>
@@ -24,12 +22,9 @@ class Refund extends Component {
                                             <p>Deshi Bazar is New Ecommerce Company in Bangladesh.We want supply authentic product to our valuable custormers.</p>
                                             <p>Deshi Bazar is New Ecommerce Company in Bangladesh.We want supply authentic product to our valuable custormers.</p>
                                             <p>Deshi Bazar is New Ecommerce Company in Bangladesh.We want supply authentic product to our valuable custormers.</p>
-
-
                                         </div>
                                     </div>
-                                </Card.Body>
-                            </Card>
+
                         </Col>
                     </Row>
                 </Container>

@@ -108,16 +108,12 @@ class Contact extends Component {
             <Fragment>
                 <Container>
                     <Row>
-                        <Breadcrumb className="shadow-sm TopSection w-100 bg-white">
-                            <Breadcrumb.Item> <Link to="/">Home</Link> </Breadcrumb.Item>
-                            <Breadcrumb.Item> <Link to="/contact">Contact</Link> </Breadcrumb.Item>
-                        </Breadcrumb>
                         <Col className="shadow-sm mt-1 animated slideInDown bg-white " md={12} lg={12} sm={12} xs={12}>
                             <Row className="text-center">
                                 <Col className="d-flex justify-content-center" md={6} lg={6} sm={12} xs={12}>
                                     <Form onSubmit={this.OnFormSubmit} id="contactForm"  className="onboardForm">
-                                        <h4 className="section-title">CONTACT WITH US</h4>
-                                        <h6 className="section-sub-title">Please Enter Your Mobile No, And Go Next</h6>
+                                        {/*<h4 className="section-title">CONTACT WITH US</h4>*/}
+                                        <h6 className="section-sub-title">Please Fill Out The Form If You Want to Contact with Us and Go Next...</h6>
                                         <input  onChange={this.NameOnChange} className="form-control m-2" type="text" placeholder="Your Name"/>
                                         <input onChange={this.EmailOnChange}  className="form-control m-2" type="email" placeholder="Your Email Address"/>
                                         <input onChange={this.MobileOnChange}  className="form-control m-2" type="text" placeholder="Mobile Number"/>

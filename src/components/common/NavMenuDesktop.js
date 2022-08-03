@@ -7,7 +7,6 @@ import user from "../../assets/images/user.svg"
 import logo from "../../assets/images/logo.png";
 
 class NavMenuDesktop extends Component {
-
     render() {
         return (
             <Fragment>

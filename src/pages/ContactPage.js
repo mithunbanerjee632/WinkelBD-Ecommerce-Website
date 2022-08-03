@@ -6,6 +6,7 @@ import FooterMobile from "../components/common/FooterMobile";
 import Contact from "../components/common/Contact";
 import Axios from "axios";
 import AppUrl from "../api/AppUrl";
+import PageTop from "../components/common/PageTop";
 
 
 class ContactPage extends Component {
@@ -27,7 +28,7 @@ class ContactPage extends Component {
                     <NavMenuMobile/>
 
                 </div>
-
+                <PageTop pagetitle="CONTACT WITH US" activepage="Contact With Us"/>
                 <Contact/>
 
                 <div className="Desktop">

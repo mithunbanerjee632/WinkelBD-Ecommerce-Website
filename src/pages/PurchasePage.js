@@ -5,6 +5,7 @@ import Contact from "../components/common/Contact";
 import FooterDesktop from "../components/common/FooterDesktop";
 import FooterMobile from "../components/common/FooterMobile";
 import Purchase from "../components/others/Purchase";
+import PageTop from "../components/common/PageTop";
 
 class PurchasePage extends Component {
     componentDidMount() {
@@ -23,7 +24,7 @@ class PurchasePage extends Component {
                     <NavMenuMobile/>
 
                 </div>
-
+                <PageTop pagetitle="HOW TO PURCHASE" activepage="How to Purchase"/>
                 <Purchase/>
 
                 <div className="Desktop">
