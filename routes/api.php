@@ -18,7 +18,7 @@ use App\Http\Controllers\SiteInfoController;
 
 Route::get('/visitorDetails',[VisitorController::class,'VisitorDetails']);
 Route::post('/contactDetails',[ContactController::class,'ContactDetails']);
-Route::get('/SiteInfoDetails',[SiteInfoController::class,'SiteInfoDetails']);
+Route::get('/siteInfoDetails',[SiteInfoController::class,'SiteInfoDetails']);
 
 
 
