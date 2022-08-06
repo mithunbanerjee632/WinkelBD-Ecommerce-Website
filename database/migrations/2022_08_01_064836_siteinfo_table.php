@@ -19,6 +19,7 @@ return new class extends Migration
            $table->text('terms_condition',5000);
            $table->text('privacy_policy',5000);
            $table->text('purchase_guide',5000);
+           $table->text('refund_policy',5000);
            $table->text('about_company',5000);
            $table->text('address',5000);
            $table->string('android_link',100);

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SiteInfoController;
+use App\Http\Controllers\CategoryDetailsController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,6 +20,7 @@ use App\Http\Controllers\SiteInfoController;
 Route::get('/visitorDetails',[VisitorController::class,'VisitorDetails']);
 Route::post('/contactDetails',[ContactController::class,'ContactDetails']);
 Route::get('/siteInfoDetails',[SiteInfoController::class,'SiteInfoDetails']);
+Route::get('/categoryDetails',[CategoryDetailsController::class,'CategoryDetails']);
 
 
 
