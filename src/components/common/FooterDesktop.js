@@ -34,7 +34,7 @@ class FooterDesktop extends Component {
                                 <h5 className="footer-menu-title">MORE INFO</h5>
                                 <Link to="/purchase" className="footer-link">How To Purchase</Link><br/>
                                 <Link to="/policy" className="footer-link">Privacy Policy</Link><br/>
-                                <Link  to="/refund" className="footer-link">Refund Policy</Link><br/>
+                                <Link  to="/refund" className="footer-link">Return Policy</Link><br/>
                             </Col>
 
 

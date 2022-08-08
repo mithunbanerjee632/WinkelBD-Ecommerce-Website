@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 
 class MegaMenu extends Component {
-    constructor() {
+    constructor(props) {
         super();
         this.state={
 
@@ -10,9 +10,9 @@ class MegaMenu extends Component {
         this.MegaMenu = this.MegaMenu.bind(this);
     }
 
-    // componentDidMount() {
-    //     this.MegaMenu();
-    // }
+    componentDidMount() {
+        this.MegaMenu();
+    }
 
     MegaMenu=(event)=>{
          var accor = document.getElementsByClassName("accordion");
@@ -47,132 +47,34 @@ class MegaMenu extends Component {
 
 
     render() {
+        const myLists = this.props.MenuData;
+        const myView = myLists.map((ParentList,i)=>{
+
+            return <div key={i.toString()}>
+                <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src={ParentList.ParentCategoryImage} />{ParentList.ParentCategoryName}</button>
+                <div className="panel">
+                    <ul>
+                        {
+                            (ParentList.SubCategory).map((ChildList,i)=>{
+                               return <li><a href="#" className="accordionItem">{ChildList.category2_name}</a></li>
+                            })
+                        }
+
+
+
+                    </ul>
+                </div>
+            </div>
+        })
+
+
+
+
         return (
             <div className="accordionMenuDiv animated slideInDown">
                <div className="accordionMenuDivInside">
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
 
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
-                   <button className="accordion" onClick={this.MegaMenu}><img className="accordionMenuIcon" src="https://sc04.alicdn.com/kf/Ha76841196894464ba5add2039787e2ebF.jpg" />Men's Clothing</button>
-                   <div className="panel">
-                       <ul>
-                           <li><a href="#" className="accordionItem">Men's Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's T-Shirt</a></li>
-                           <li><a href="#" className="accordionItem">Men's Pant</a></li>
-                       </ul>
-                   </div>
-
+                   {myView}
                </div>
             </div>
         );

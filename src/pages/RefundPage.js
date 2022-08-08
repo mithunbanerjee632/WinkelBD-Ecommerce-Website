@@ -23,7 +23,7 @@ class RefundPage extends Component {
                     <NavMenuMobile/>
 
                 </div>
-                <PageTop pagetitle="REFUND POLICY" activepage="Refund Policy"/>
+                <PageTop pagetitle="RETURN & REPLACEMENT POLICY" activepage="Return & Replacement Policy"/>
                 <Refund/>
 
                 <div className="Desktop">
