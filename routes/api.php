@@ -1,11 +1,13 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SiteInfoController;
 use App\Http\Controllers\CategoryDetailsController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,11 +18,15 @@ use App\Http\Controllers\CategoryDetailsController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+//Page Routes
 Route::get('/visitorDetails',[VisitorController::class,'VisitorDetails']);
 Route::post('/contactDetails',[ContactController::class,'ContactDetails']);
 Route::get('/siteInfoDetails',[SiteInfoController::class,'SiteInfoDetails']);
+//Category Routes
 Route::get('/categoryDetails',[CategoryDetailsController::class,'CategoryDetails']);
+//Product Routes
+Route::get('/productList/{remarks}',[ProductController::class,'ProductList']);
+Route::get('/productBySubcategory/{category}/{subcategory}',[ProductController::class,'ProductBySubCategory']);
 
 
 
