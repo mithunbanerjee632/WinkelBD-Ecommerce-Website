@@ -2,18 +2,37 @@ import React, {Component, Fragment} from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import {Card, Container} from "react-bootstrap";
+import {Card, Col, Container} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import Axios from "axios";
+import AppUrl from "../../api/AppUrl";
+import Loading from "../loader/Loading";
+import WentWrong from "../wentwrong/WentWrong";
 
 class NewArrival extends Component {
 
     constructor() {
         super();
         this.state={
-
+            arrival:[],
+            isLoading:true,
+            isError:false
         }
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
+    }
+
+    componentDidMount() {
+        Axios.get(AppUrl.ProductListByRemark('NEW')).then(response=>{
+            if(response.status==200){
+                let jsonData = response.data;
+                this.setState({arrival:jsonData,isLoading:false,isError:false})
+            }else{
+                this.setState({isLoading:false,isError:true});
+            }
+        }).catch(error=>{
+            this.setState({isLoading:false,isError:true});
+        });
     }
 
     next() {
@@ -62,83 +81,61 @@ class NewArrival extends Component {
             ]
         };
 
-        return (
-            <Fragment>
-                <Container fluid={true} className="text-center BetweenTwoSection">
-                    <h4 className="section-title">NEW ARRIVAL
-                        <a className="btn btn-sm mx-2 site-btn" onClick={this.previous} ><i className="fa fa-angle-left"/>
-                        </a>
-                        <a className="btn btn-sm mx-2 site-btn" onClick={this.next}>
-                            <i className="fa fa-angle-right"/>
-                        </a>
-                    </h4>
-                    <p className="section-sub-title">Some of Our Exclusive Collection.You May Like</p>
+        const MyProductList = this.state.arrival;
+        const MyView=MyProductList.map((ProductList,i)=>{
+            if(ProductList.special_price==="N/A"){
+                return  <div key={i.toString()} className="p-1" >
+                    <Card className="card  text-center  w-100  image-box ">
+                        <img src={ProductList.image} alt=""/>
+                        <Card.Body>
+                            <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
+                            <p className="product-price-on-card">Price: { ProductList.price}TK</p>
+                        </Card.Body>
+                    </Card>
+                </div>
 
-                    <Slider ref={c => (this.slider = c)} {...settings}>
-                        <div>
-                            <Card className="card h-100  text-center w-100  image-box">
-                                <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/h/o/hot-12-play-4gb-128gb-20-07-2022.jpg"/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                    <p className="product-price-on-card">Price:7,999 Tk</p>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                        <div>
-                            <Link to="/productDetails">
-                                <Card className="card h-100  text-center w-100  image-box">
-                                    <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/y/1/y15s-13-07-2022.jpg"/>
-                                    <Card.Body>
-                                        <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                        <p className="product-price-on-card">Price:7,999 Tk</p>
-                                    </Card.Body>
-                                </Card>
-                            </Link>
-                        </div>
-                        <div>
-                            <Link to="/productDetails">
-                                <Card className="card h-100  text-center w-100  image-box">
-                                    <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/m/s/msa18crnebu-20-07-2022.jpg"/>
-                                    <Card.Body>
-                                        <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                        <p className="product-price-on-card">Price:7,999 Tk</p>
-                                    </Card.Body>
-                                </Card>
-                            </Link>
-                        </div>
-                        <div>
+            }else{
+                return <div key={i.toString()} className="p-1" >
+                    <Card className="card  text-center  w-100  image-box ">
+                        <img src={ProductList.image} alt=""/>
+                        <Card.Body>
+                            <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
+                            <p className="product-price-on-card">
+                                Price: <strike className="text-secondary">{ ProductList.price}TK</strike>  { ProductList.special_price}TK
+                            </p>
+                        </Card.Body>
+                    </Card>
+                </div>
+            }
+        })
 
-                            <Card className="card h-100  text-center w-100  image-box">
-                                <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/j/b/jbl-flip-5-wireless-portable-speaker-16-7-22.jpg"/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                    <p className="product-price-on-card">Price:7,999 Tk</p>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                        <div>
-                            <Card className="card h-100  text-center w-100  image-box">
-                                <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/h/o/hot-12-play-4gb-128gb-20-07-2022.jpg"/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                    <p className="product-price-on-card">Price:7,999 Tk</p>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                        <div>
-                            <Card className="card h-100  text-center w-100  image-box">
-                                <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/y/1/y15s-13-07-2022.jpg"/>
-                                <Card.Body>
-                                    <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                    <p className="product-price-on-card">Price:7,999 Tk</p>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    </Slider>
+        if(this.state.isLoading==true && this.state.iError==false){
+            return <Loading/>;
+        }else if(this.state.isLoading==false && this.state.iError==false){
+            return (
+                <Fragment>
+                    <Container fluid={true} className="text-center BetweenTwoSection">
+                        <h4 className="section-title">NEW ARRIVAL
+                            <a className="btn btn-sm mx-2 site-btn" onClick={this.previous} ><i className="fa fa-angle-left"/>
+                            </a>
+                            <a className="btn btn-sm mx-2 site-btn" onClick={this.next}>
+                                <i className="fa fa-angle-right"/>
+                            </a>
+                        </h4>
+                        <p className="section-sub-title">Some of Our Exclusive Collection.You May Like</p>
 
-                </Container>
-            </Fragment>
-        );
+                        <Slider ref={c => (this.slider = c)} {...settings}>
+                            {MyView}
+                        </Slider>
+
+                    </Container>
+                </Fragment>
+            );
+        }else if(this.state.isLoading==false && this.state.iError==true){
+            return <WentWrong/>;
+        }
+
+
     }
 }
 

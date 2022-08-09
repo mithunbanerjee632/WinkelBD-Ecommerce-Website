@@ -56,7 +56,7 @@ class MegaMenu extends Component {
                     <ul>
                         {
                             (ParentList.SubCategory).map((ChildList,i)=>{
-                               return <li><a href="#" className="accordionItem">{ChildList.category2_name}</a></li>
+                               return <li key={i.toString()}><a href="#" className="accordionItem">{ChildList.category2_name}</a></li>
                             })
                         }
 

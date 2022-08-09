@@ -33,7 +33,7 @@ class Collection extends Component {
         const MyView=MyProductList.map((ProductList,i)=>{
           if(ProductList.special_price==="N/A"){
               return  <Col key={i.toString()} className="p-1"  xl={2} lg={2} md={2} sm={6} xs={6}>
-                  <Card className="card h-100  text-center w-100  image-box ">
+                  <Card className="card  text-center w-100  image-box ">
                       <img src={ProductList.image} alt=""/>
                       <Card.Body>
                           <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
@@ -43,13 +43,13 @@ class Collection extends Component {
               </Col>
 
           }else{
-              return <Col className="p-1" xl={2} lg={2} md={2} sm={6} xs={6} >
-                  <Card className="card h-100  text-center w-100  image-box ">
+              return <Col key={i.toString()} className="p-1" xl={2} lg={2} md={2} sm={6} xs={6} >
+                  <Card className="card  text-center w-100  image-box ">
                       <img src={ProductList.image} alt=""/>
                       <Card.Body>
                           <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
                           <p className="product-price-on-card">
-                              Price: <strike class="text-secondary">{ ProductList.price}TK</strike>  { ProductList.special_price}TK
+                              Price: <strike className="text-secondary">{ ProductList.price}TK</strike>  { ProductList.special_price}TK
                           </p>
                       </Card.Body>
                   </Card>

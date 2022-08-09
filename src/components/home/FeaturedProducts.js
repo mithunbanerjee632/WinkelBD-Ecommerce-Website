@@ -51,7 +51,7 @@ class FeaturedProducts extends Component {
                         <Card.Body>
                             <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
                             <p className="product-price-on-card">
-                                Price: <strike class="text-secondary">{ ProductList.price}TK</strike>  { ProductList.special_price}TK
+                                Price: <strike className="text-secondary">{ ProductList.price}TK</strike>  { ProductList.special_price}TK
                             </p>
 
                         </Card.Body>
