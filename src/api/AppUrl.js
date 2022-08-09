@@ -11,6 +11,7 @@ class AppUrl {
     static ProductListByRemark(remarks){
         return this.BaseUrl+'productListBYRemark/'+remarks;
     }
+
 }
 
 export default AppUrl;

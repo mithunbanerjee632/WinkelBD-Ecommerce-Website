@@ -35,7 +35,7 @@ class FeaturedProducts extends Component {
         const myView = MyPorductList.map((ProductList,i)=>{
 
             if(ProductList.special_price==="N/A"){
-                return  <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+                return  <Col key={i.toString()} className="p-1"  xl={2} lg={2} md={2} sm={4} xs={6}>
                     <Card className="image-box h-100 w-100 card">
                         <img src={ProductList.image}/>
                         <Card.Body>
@@ -45,7 +45,7 @@ class FeaturedProducts extends Component {
                     </Card>
                 </Col>
             }else{
-                return  <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+                return  <Col key={i.toString()} className="p-1" xl={2} lg={2} md={2} sm={4} xs={6}>
                     <Card className="image-box h-100 w-100 card">
                         <img src={ProductList.image}/>
                         <Card.Body>

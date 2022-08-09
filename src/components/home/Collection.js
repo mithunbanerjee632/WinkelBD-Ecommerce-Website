@@ -1,99 +1,83 @@
 import React, {Component, Fragment} from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
+import AppUrl from "../../api/AppUrl";
+import Axios from "axios";
+import Loading from "../loader/Loading";
+import WentWrong from "../wentwrong/WentWrong";
 
 class Collection extends Component {
+    constructor() {
+        super();
+        this.state={
+            collection:[],
+            isLoading:true,
+            isError:false
+        }
+    }
+
+    componentDidMount() {
+        Axios.get(AppUrl.ProductListByRemark('COLLECTION')).then(response=>{
+               if(response.status==200){
+                   let jsonData = response.data;
+                   this.setState({collection:jsonData,isLoading:false,isError:false})
+               }else{
+                   this.setState({isLoading:false,isError:true});
+               }
+        }).catch(error=>{
+            this.setState({isLoading:false,isError:true});
+        });
+    }
+
     render() {
-        return (
-            <Fragment>
-               <Container className="text-center BetweenTwoSection" fluid={true}>
-                   <h4 className="section-title">SPECIAL COLLECTION</h4>
-                   <p className="section-sub-title">Some of Our Exclusive Collection.You May Like</p>
+        const MyProductList = this.state.collection;
+        const MyView=MyProductList.map((ProductList,i)=>{
+          if(ProductList.special_price==="N/A"){
+              return  <Col key={i.toString()} className="p-1"  xl={2} lg={2} md={2} sm={6} xs={6}>
+                  <Card className="card h-100  text-center w-100  image-box ">
+                      <img src={ProductList.image} alt=""/>
+                      <Card.Body>
+                          <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
+                          <p className="product-price-on-card">Price: { ProductList.price}TK</p>
+                      </Card.Body>
+                  </Card>
+              </Col>
 
-                   <Row>
-                       <Col className="p-0" xl={3} lg={3} md={3} sm={6} xs={6}>
-                           <Card className="card h-100  text-center w-100  image-box">
-                               <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/h/o/hot-12-play-4gb-128gb-20-07-2022.jpg"/>
-                               <Card.Body>
-                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                   <p className="product-price-on-card">Price:7,999 Tk</p>
-                               </Card.Body>
-                           </Card>
-                       </Col>
+          }else{
+              return <Col className="p-1" xl={2} lg={2} md={2} sm={6} xs={6} >
+                  <Card className="card h-100  text-center w-100  image-box ">
+                      <img src={ProductList.image} alt=""/>
+                      <Card.Body>
+                          <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
+                          <p className="product-price-on-card">
+                              Price: <strike class="text-secondary">{ ProductList.price}TK</strike>  { ProductList.special_price}TK
+                          </p>
+                      </Card.Body>
+                  </Card>
+              </Col>
+          }
+        })
 
-                       <Col className="p-0" xl={3} lg={3} md={3} sm={6} xs={6}>
-                           <Card className="card h-100  text-center w-100  image-box">
-                               <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/y/1/y15s-13-07-2022.jpg"/>
-                               <Card.Body>
-                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                   <p className="product-price-on-card">Price:7,999 Tk</p>
-                               </Card.Body>
-                           </Card>
-                       </Col>
+        if(this.state.isLoading==true && this.state.isError==false){
+            return <Loading/>;
+        }else if(this.state.isLoading==false && this.state.isError==false){
+            return (
+                <Fragment>
+                    <Container className="text-center BetweenTwoSection" fluid={true}>
+                        <h4 className="section-title">SPECIAL COLLECTION</h4>
+                        <p className="section-sub-title">Some of Our Exclusive Collection.You May Like</p>
 
-                       <Col className="p-0" xl={3} lg={3} md={3} sm={6} xs={6}>
-                           <Card className="card h-100  text-center w-100  image-box">
-                               <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/m/s/msa18crnebu-20-07-2022.jpg"/>
-                               <Card.Body>
-                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                   <p className="product-price-on-card">Price:7,999 Tk</p>
-                               </Card.Body>
-                           </Card>
-                       </Col>
+                        <Row>
+                            {MyView}
 
-                       <Col className="p-0" xl={3} lg={3} md={3} sm={6} xs={6}>
-                           <Card className="card h-100  text-center w-100  image-box">
-                               <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/j/b/jbl-flip-5-wireless-portable-speaker-16-7-22.jpg"/>
-                               <Card.Body>
-                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                   <p className="product-price-on-card">Price:7,999 Tk</p>
-                               </Card.Body>
-                           </Card>
-                       </Col>
 
-                       <Col className="p-0" xl={3} lg={3} md={3} sm={6} xs={6}>
-                           <Card className="card h-100  text-center w-100  image-box">
-                               <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/h/o/hot-12-play-4gb-128gb-20-07-2022.jpg"/>
-                               <Card.Body>
-                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                   <p className="product-price-on-card">Price:7,999 Tk</p>
-                               </Card.Body>
-                           </Card>
-                       </Col>
+                        </Row>
+                    </Container>
+                </Fragment>
+            );
+        }else if(this.state.isLoading==false && this.state.isError==true){
+            return <WentWrong/>;
+        }
 
-                       <Col className="p-0" xl={3} lg={3} md={3} sm={6} xs={6}>
-                           <Card className="card h-100  text-center w-100  image-box">
-                               <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/y/1/y15s-13-07-2022.jpg"/>
-                               <Card.Body>
-                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                   <p className="product-price-on-card">Price:7,999 Tk</p>
-                               </Card.Body>
-                           </Card>
-                       </Col>
-
-                       <Col className="p-0" xl={3} lg={3} md={3} sm={6} xs={6}>
-                           <Card className="card h-100  text-center w-100  image-box">
-                               <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/m/s/msa18crnebu-20-07-2022.jpg"/>
-                               <Card.Body>
-                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                   <p className="product-price-on-card">Price:7,999 Tk</p>
-                               </Card.Body>
-                           </Card>
-                       </Col>
-
-                       <Col className="p-0" xl={3} lg={3} md={3} sm={6} xs={6}>
-                           <Card className="card h-100  text-center w-100  image-box">
-                               <img src="https://azse77seaprodsa.blob.core.windows.net/b2b-dr-pickaboocdn/media/catalog/product/cache/a4a71470c99ce7a4925275fbc94e38e5/j/b/jbl-flip-5-wireless-portable-speaker-16-7-22.jpg"/>
-                               <Card.Body>
-                                   <h5 className="product-name-on-card">Amazfit GTS 4 Mini Smart Watch Global Version</h5>
-                                   <p className="product-price-on-card">Price:7,999 Tk</p>
-                               </Card.Body>
-                           </Card>
-                       </Col>
-
-                   </Row>
-               </Container>
-            </Fragment>
-        );
     }
 }
 
