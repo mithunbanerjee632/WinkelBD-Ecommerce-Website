@@ -6,6 +6,11 @@ class AppUrl {
     static ContactDetails = this.BaseUrl+'contactDetails';
     static SiteInfoDetails = this.BaseUrl+'siteInfoDetails';
     static CategoryDetails = this.BaseUrl+'categoryDetails';
+
+
+    static ProductListByRemark(remarks){
+        return this.BaseUrl+'productListBYRemark/'+remarks;
+    }
 }
 
 export default AppUrl;
