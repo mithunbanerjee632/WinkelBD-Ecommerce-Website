@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-  function ProductList(Request $request){
+  function ProductListByRemark(Request $request){
       $remarks = $request->remarks;
       $productList = ProductListModel::where('remark',$remarks)->get();
       return $productList;
@@ -18,5 +18,12 @@ class ProductController extends Controller
       $subCategory = $request->subcategory;
       $productList = ProductListModel::where('category',$category)->where('subcategory',$subCategory)->get();
       return $productList;
+  }
+
+  function ProductByCategory(Request $request){
+     $category= $request->category;
+     $productList=ProductListModel::where('category',$category)->get();
+     return $productList;
+
   }
 }

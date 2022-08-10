@@ -25,7 +25,8 @@ Route::get('/siteInfoDetails',[SiteInfoController::class,'SiteInfoDetails']);
 //Category Routes
 Route::get('/categoryDetails',[CategoryDetailsController::class,'CategoryDetails']);
 //Product Routes
-Route::get('/productList/{remarks}',[ProductController::class,'ProductList']);
+Route::get('/productListBYRemark/{remarks}',[ProductController::class,'ProductListByRemark']);
+Route::get('/productByCategory/{category}',[ProductController::class,'ProductByCategory']);
 Route::get('/productBySubcategory/{category}/{subcategory}',[ProductController::class,'ProductBySubCategory']);
 
 
