@@ -20,6 +20,8 @@ class AppUrl {
         return this.BaseUrl+'productBySubcategory/'+category+'/'+subcategory;
     }
 
+    static SliderDetails = this.BaseUrl+'sliderDetails';
+
 }
 
 export default AppUrl;

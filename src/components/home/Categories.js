@@ -27,7 +27,7 @@ class Categories extends Component {
         let myLists = this.state.categories;
 
         let myView = myLists.map((Categories,i)=>{
-            return  <Col key={i.toString()} className="p-0"  xl={2} lg={2} md={2} sm={6} xs={6}>
+            return  <Col key={i.toString()} className="p-0"  xl={2} lg={2} md={2} sm={4} xs={4}>
                 <Link to={"ProductByCategory/"+Categories.ParentCategoryName}>
                     <Card className="h-100 w-100 text-center">
 

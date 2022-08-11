@@ -9,17 +9,29 @@ class HomeTop extends Component {
     constructor() {
         super();
         this.state={
-            MegaMenu:[]
+            MegaMenu:[],
+            Slider:[]
         }
     }
 
     componentDidMount() {
+        //Megamenu
+
         Axios.get(AppUrl.CategoryDetails).then(response=>{
             let jsonData = response.data;
             this.setState({MegaMenu:jsonData});
         }).catch(error=>{
 
         });
+
+        //Slider
+        Axios.get(AppUrl.SliderDetails).then(response=>{
+            let jsonData = response.data;
+            this.setState({Slider:jsonData});
+        }).catch(error=>{
+
+        });
+
     }
 
     render() {
@@ -32,7 +44,7 @@ class HomeTop extends Component {
                        </Col>
 
                        <Col className="p-0 m-0" lg={9} md={9} sm={12} xs={12}>
-                           <HomeSlider/>
+                           <HomeSlider slider={this.state.Slider}/>
                        </Col>
                    </Row>
                </Container>

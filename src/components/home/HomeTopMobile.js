@@ -11,7 +11,7 @@ class HomeTopMobile extends Component {
                     <Row className="p-0 m-0 overflow-hidden">
 
                         <Col className="p-0 m-0 overflow-hidden" xl={12} lg={12} md={12} sm={12} xs={12}>
-                            <HomeSlider/>
+                            {/*<HomeSlider/>*/}
                         </Col>
                     </Row>
                 </Container>

@@ -22,7 +22,7 @@ class ProductBySubcategory extends Component {
         Axios.get(AppUrl.ProductListBySubCategory(this.state.category,this.state.subcategory)).then(response=>{
             if(response.status==200){
                 let jsonData = response.data;
-                this.setState({productData:jsonData,isLoading:false,isError:true})
+                this.setState({productData:jsonData,isLoading:false,isError:false})
             }else{
                 this.setState({isLoading:false,isError:true})
             }
