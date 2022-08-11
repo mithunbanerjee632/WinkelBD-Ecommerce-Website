@@ -12,6 +12,14 @@ class AppUrl {
         return this.BaseUrl+'productListBYRemark/'+remarks;
     }
 
+    static ProductListByCategory(category){
+        return this.BaseUrl+'productByCategory/'+category;
+    }
+
+    static ProductListBySubCategory(category,subcategory){
+        return this.BaseUrl+'productBySubcategory/'+category+'/'+subcategory;
+    }
+
 }
 
 export default AppUrl;

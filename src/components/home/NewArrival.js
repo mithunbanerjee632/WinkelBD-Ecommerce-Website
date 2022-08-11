@@ -109,9 +109,9 @@ class NewArrival extends Component {
             }
         })
 
-        if(this.state.isLoading==true && this.state.iError==false){
+        if(this.state.isLoading==true && this.state.isError==false){
             return <Loading/>;
-        }else if(this.state.isLoading==false && this.state.iError==false){
+        }else if(this.state.isLoading==false && this.state.isError==false){
             return (
                 <Fragment>
                     <Container fluid={true} className="text-center BetweenTwoSection">
@@ -131,7 +131,7 @@ class NewArrival extends Component {
                     </Container>
                 </Fragment>
             );
-        }else if(this.state.isLoading==false && this.state.iError==true){
+        }else if(this.state.isLoading==false && this.state.isError==true){
             return <WentWrong/>;
         }
 
